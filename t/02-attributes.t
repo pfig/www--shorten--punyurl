@@ -2,10 +2,10 @@
 
 use Test::More tests => 3;
 
-use WebService::SAPO::PunyURL;
+use WWW::Shorten::PunyURL;
 
 my $url = 'http://developers.sapo.pt/';
-my $punyurl = WebService::SAPO::PunyURL->new(
+my $punyurl = WWW::Shorten::PunyURL->new(
     url => $url
 );
 

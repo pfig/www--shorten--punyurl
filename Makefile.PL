@@ -1,7 +1,7 @@
 use inc::Module::Install;
 
-name     'WebService-SAPO-PunyURL';
-all_from 'lib/WebService/SAPO/PunyURL.pm';
+name     'WWW-Shorten-PunyURL';
+all_from 'lib/WWW/Shorten/PunyURL.pm';
 author   'Pedro Figueiredo <me@pedrofigueiredo.org>';
 license  'perl';
 

@@ -4,11 +4,11 @@ use utf8;
 
 use Test::More tests => 3;
 
-use WebService::SAPO::PunyURL;
+use WWW::Shorten::PunyURL;
 use XML::LibXML::XPathContext;
 
 my $url = 'http://developers.sapo.pt/';
-my $punyurl = WebService::SAPO::PunyURL->new(
+my $punyurl = WWW::Shorten::PunyURL->new(
     url => $url
 );
 

@@ -1,4 +1,4 @@
-WebService-SAPO-PunyURL
+WWW-Shorten-PunyURL
 
 PunyURL is a URL shortening service provided by SAPO (http://sapo.pt/). This library provides an interface to the corresponding Web service.
 
@@ -16,21 +16,21 @@ SUPPORT AND DOCUMENTATION
 After installing, you can find documentation for this module with the
 perldoc command.
 
-    perldoc WebService::SAPO::PunyURL
+    perldoc WWW::Shorten::PunyURL
 
 You can also look for information at:
 
     RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=WebService-SAPO-PunyURL
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-Shorten-PunyURL
 
     AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/WebService-SAPO-PunyURL
+        http://annocpan.org/dist/WWW-Shorten-PunyURL
 
     CPAN Ratings
-        http://cpanratings.perl.org/d/WebService-SAPO-PunyURL
+        http://cpanratings.perl.org/d/WWW-Shorten-PunyURL
 
     Search CPAN
-        http://search.cpan.org/dist/WebService-SAPO-PunyURL/
+        http://search.cpan.org/dist/WWW-Shorten-PunyURL/
 
 
 COPYRIGHT AND LICENCE

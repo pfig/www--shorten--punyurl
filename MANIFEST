@@ -2,7 +2,10 @@ Changes
 MANIFEST
 Makefile.PL
 README
-lib/WebService/SAPO/PunyURL.pm
+lib/WWW/Shorten/PunyURL.pm
 t/00-load.t
+t/01-new.t
+t/02-attributes.t
+t/03-xmlparsing.t
 t/pod-coverage.t
 t/pod.t

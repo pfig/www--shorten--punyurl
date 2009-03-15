@@ -3,7 +3,7 @@
 use Test::More tests => 1;
 
 BEGIN {
-	use_ok( 'WebService::SAPO::PunyURL' );
+	use_ok( 'WWW::Shorten::PunyURL' );
 }
 
-diag( "Testing WebService::SAPO::PunyURL $WebService::SAPO::PunyURL::VERSION, Perl $], $^X" );
+diag( "Testing WWW::Shorten::PunyURL $WWW::Shorten::PunyURL::VERSION, Perl $], $^X" );

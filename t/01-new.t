@@ -2,10 +2,10 @@
 
 use Test::More tests => 2;
 
-use WebService::SAPO::PunyURL;
+use WWW::Shorten::PunyURL;
 
 my $url = 'http://developers.sapo.pt/';
-my $punyurl = WebService::SAPO::PunyURL->new( url => $url );
+my $punyurl = WWW::Shorten::PunyURL->new( url => $url );
 
 ok( defined $punyurl, 'Object created' );
-isa_ok( $punyurl, 'WebService::SAPO::PunyURL', 'Object type is correct' );
+isa_ok( $punyurl, 'WWW::Shorten::PunyURL', 'Object type is correct' );

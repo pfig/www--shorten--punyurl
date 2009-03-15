@@ -45,5 +45,5 @@ not_in_file_ok(Changes =>
     "placeholder date/time"       => qr(Date/time)
 );
 
-module_boilerplate_ok('lib/WebService/SAPO/PunyURL.pm');
+module_boilerplate_ok('lib/WWW/Shorten/PunyURL.pm');
 

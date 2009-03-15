@@ -1,8 +1,8 @@
-package WebService::SAPO::PunyURL;
+package WWW::Shorten::PunyURL;
 
 =head1 NAME
 
-WebService::SAPO::PunyURL - An interface to SAPO's URL shortening service
+WWW::Shorten::PunyURL - An interface to SAPO's URL shortening service
 
 =head1 VERSION
 
@@ -19,7 +19,7 @@ PunyURL is a URL shortening service provided by SAPO (L<http://sapo.pt/>). Given
 
 You can also provide the shortened URL and get back the original one.
 
-    use WebService::SAPO::PunyURL;
+    use WWW::Shorten::PunyURL;
 
     my $punyurl = WebService::SAPO::PunyURL->new( url => $long );
     $punyurl->shorten;
@@ -50,9 +50,6 @@ Optionally, you can give the constructor a timeout value (which defaults to 10 s
 =back
 
 =cut
-
-#use Moose;
-#use Moose::Util::TypeConstraints;
 
 use Mouse;
 use Mouse::Util::TypeConstraints;
@@ -141,9 +138,9 @@ use constant ENDPOINT => 'http://services.sapo.pt/PunyURL';
 
 =head2 new
 
-Create a new WebService::SAPO::PunyURL object. Takes a string (containing a URL) as the argument (may also take an optional timeout, see SYNOPSIS):
+Create a new WWW::Shorten::PunyURL object. Takes a string (containing a URL) as the argument (may also take an optional timeout, see SYNOPSIS):
 
-    my $punyurl = WebService::SAPO::PunyURL->new( $url );
+    my $punyurl = WWW::Shorten::PunyURL->new( $url );
 
 =head2 shorten
 
@@ -291,18 +288,14 @@ Pedro Figueiredo, C<< <me at pedrofigueiredo.org> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-webservice-sapo-punyurl at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WebService-SAPO-PunyURL>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-
+Please report any bugs or feature requests to C<bug-www-shorten-punyurl at rt.cpan.org>, or through the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WWW-Shorten-PunyURL>.  I will be notified, and then you'll automatically be notified of progress on your bug as I make changes.
 
 
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc WebService::SAPO::PunyURL
+    perldoc WWW::Shorten::PunyURL
 
 
 You can also look for information at:
@@ -311,19 +304,19 @@ You can also look for information at:
 
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=WebService-SAPO-PunyURL>
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-Shorten-PunyURL>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
-L<http://annocpan.org/dist/WebService-SAPO-PunyURL>
+L<http://annocpan.org/dist/WWW-Shorten-PunyURL>
 
 =item * CPAN Ratings
 
-L<http://cpanratings.perl.org/d/WebService-SAPO-PunyURL>
+L<http://cpanratings.perl.org/d/WWW-Shorten-PunyURL>
 
 =item * Search CPAN
 
-L<http://search.cpan.org/dist/WebService-SAPO-PunyURL/>
+L<http://search.cpan.org/dist/WWW-Shorten-PunyURL/>
 
 =back
 
@@ -351,4 +344,4 @@ under the same terms as Perl itself.
 
 =cut
 
-1; # End of WebService::SAPO::PunyURL
+1; # End of WWW::Shorten::PunyURL
