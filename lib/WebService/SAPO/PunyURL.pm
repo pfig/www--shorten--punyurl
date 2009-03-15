@@ -42,16 +42,12 @@ Optionally, you can give the constructor a timeout value (which defaults to 10 s
 
 * Write conditional network tests
 
-* Write mock tests with a local XML file
-
 * Report/fix bug in Regexp::Common::URI (doesn't handle Unicode)
-  UNTIL THIS IS FIXED, REQUESTING THE URL CORRESPONDING A PUNYCODE SHORTENED
-  ONE WILL BREAK HORRIBLY AND PROBABLY DESTROY THE WORLD. USE THE ASCII SHORT
-  VERSION FOR NOW.
+  UNTIL THIS IS FIXED, REQUESTING THE URL CORRESPONDING TO A PUNYCODE
+  SHORTENED ONE WILL BREAK HORRIBLY AND PROBABLY DESTROY THE WORLD. USE THE
+  ASCII SHORT VERSION FOR NOW.
 
 =back
-
-=over
 
 =cut
 
@@ -340,6 +336,8 @@ L<http://search.cpan.org/dist/WebService-SAPO-PunyURL/>
 
 * Léon Brocard, for writing lots of code I can look at. My mistakes are my
   own, however.
+  
+* and of course, SAPO :)
 
 =back
 

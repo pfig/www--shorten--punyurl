@@ -6,7 +6,7 @@ use WebService::SAPO::PunyURL;
 
 my $url = 'http://developers.sapo.pt/';
 my $punyurl = WebService::SAPO::PunyURL->new(
-    url => 'http://developers.sapo.pt/'
+    url => $url
 );
 
 is( $punyurl->url, 'http://developers.sapo.pt/', 'URL setting' );
