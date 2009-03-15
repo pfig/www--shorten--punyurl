@@ -37,5 +37,3 @@
 ^\.gitignore$
 
 # Local test files
-irc\.pl$
-ircconsole\.pl$
