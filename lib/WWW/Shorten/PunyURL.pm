@@ -21,17 +21,17 @@ You can also provide the shortened URL and get back the original one.
 
     use WWW::Shorten::PunyURL;
 
-    my $punyurl = WebService::SAPO::PunyURL->new( url => $long );
+    my $punyurl = WWW::Shorten::PunyURL->new( url => $long );
     $punyurl->shorten;
     
     # or
     
-    my $punyurl = WebService::SAPO::PunyURL->new( url => $short );
+    my $punyurl = WWW::Shorten::PunyURL->new( url => $short );
     $punyurl->long;
 
 Optionally, you can give the constructor a timeout value (which defaults to 10 seconds):
 
-    my $punyurl = WebService::SAPO::PunyURL->new(
+    my $punyurl = WWW::Shorten::PunyURL->new(
         url     => $long,
         timeout => 5
     );
