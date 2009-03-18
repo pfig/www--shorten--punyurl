@@ -325,12 +325,11 @@ L<http://search.cpan.org/dist/WWW-Shorten-PunyURL/>
 
 =over 4
 
-* João Pedro, from SAPO, for pushing PunyURL.
+=item * João Pedro, from SAPO, for pushing PunyURL.
 
-* Léon Brocard, for writing lots of code I can look at. My mistakes are my
-  own, however.
+=item * Léon Brocard, for writing lots of code I can look at. My mistakes are my own, however.
   
-* and of course, SAPO :)
+=item * and of course, SAPO :)
 
 =back
 
