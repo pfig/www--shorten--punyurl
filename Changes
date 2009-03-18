@@ -1,5 +1,8 @@
-Revision history for WebService-SAPO-PunyURL
+Revision history for WWW::Shorten::PunyURL
 
+0.02    2009/03/18
+        Support for preview
+        
 0.01    2009/03/14
         First version.
 
