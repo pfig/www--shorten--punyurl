@@ -2,7 +2,7 @@
 
 use utf8;
 
-use Test::More tests => 3;
+use Test::More tests => 4;
 
 use WWW::Shorten::PunyURL;
 use XML::LibXML::XPathContext;
@@ -28,12 +28,15 @@ $xpc->registerNs( 'p', 'http://services.sapo.pt/Metadata/PunyURL' );
 
 my $puny     = $xpc->findvalue( '//p:puny' );
 my $ascii    = $xpc->findvalue( '//p:ascii' );
+my $preview  = $xpc->findvalue( '//p:preview' );
 my $original = $xpc->findvalue( '//p:url' );
 
 $punyurl->puny( $puny );
 $punyurl->ascii( $ascii );
 $punyurl->original( $original );
+$punyurl->preview( $preview );
 
 is( $punyurl->puny, 'http://漭.sl.pt', 'PunyURL (Unicode) found' );
 is( $punyurl->ascii, 'http://b.ot.sl.pt', 'PunyURL (ASCII) found' );
+is( $punyurl->preview, 'http://b.ot.sl.pt/-', 'PunyURL (Preview) found' );
 is( $punyurl->original, 'http://developers.sapo.pt/', 'Original URL found' );

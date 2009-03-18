@@ -80,8 +80,12 @@ has 'puny'     => (
 
 has 'ascii'    => (
     is         => 'rw',
-    isa        => 'Str',
-    default    => '',
+    isa        => 'URL',
+);
+
+has 'preview'  => (
+    is         => 'rw',
+    isa        => 'URL',
 );
 
 has 'original' => (
@@ -152,6 +156,7 @@ Give it a long url and you will get two shortened URLs, one using Unicode and it
         print $punyurl->url, "is now:\n";
         print "\t", $punyurl->puny, "\n";
         print "\t", $punyurl->ascii, "\n";
+        print "\t", $punyurl->preview, "\n";
     } else {
         print STDERR "Error:\n";
         print STDERR $punyurl->errstr, "(", $punyurl->error, "\n";
@@ -167,12 +172,14 @@ sub shorten {
     my $xml = $self->_do_http( $request );
     return undef unless $xml;
     
-    my $xpc   = $self->_get_xpc( $xml );
-    my $puny  = $xpc->findvalue( '//p:puny' );
-    my $ascii = $xpc->findvalue( '//p:ascii' );
+    my $xpc     = $self->_get_xpc( $xml );
+    my $puny    = $xpc->findvalue( '//p:puny' );
+    my $ascii   = $xpc->findvalue( '//p:ascii' );
+    my $preview = $xpc->findvalue( '//p:preview' );
     
     $self->puny( $puny );
     $self->ascii( $ascii );
+    $self->preview( $preview );
     
     return 1;
 }
