@@ -1,16 +1,18 @@
 package WWW::Shorten::PunyURL;
 
+use 5.006;
+
 =head1 NAME
 
 WWW::Shorten::PunyURL - An interface to SAPO's URL shortening service
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 =head1 SYNOPSIS
@@ -52,7 +54,15 @@ Optionally, you can give the constructor a timeout value (which defaults to 10 s
 =cut
 
 use Mouse;
+
+extends 'WWW::Shorten::generic';
+extends 'Exporter';
+
+our @EXPORT = qw( makeashorterlink makealongerlink );
+
 use Mouse::Util::TypeConstraints;
+
+use Carp;
 
 use Regexp::Common qw/ URI /;
 
@@ -138,6 +148,36 @@ The service endpoint for PunyURL
 
 use constant ENDPOINT => 'http://services.sapo.pt/PunyURL';
 
+=head1 EXPORTS
+
+=head2 makeashorterlink
+
+This function will return the PunyURL corresponding to the original URL.
+
+=cut
+
+sub makeashorterlink {
+    my $url  = shift or croak 'No URL passed to makeashorterlink()';
+    
+    my $puny = __PACKAGE__->new( $url );
+    
+    return $puny->shorten->ascii;
+}
+
+=head2 makealongerlink
+
+This function does the reverse, finding the long URL corresponding to a PunyURL.
+
+=cut
+
+sub makealongerlink {
+    my $puny = shift or croak 'No PunyURL passed to makealongerlink()';
+    
+    my $url = __PACKAGE__->new( $puny );
+    
+    return $url->long->original;
+}
+
 =head1 FUNCTIONS
 
 =head2 new
@@ -181,7 +221,7 @@ sub shorten {
     $self->ascii( $ascii );
     $self->preview( $preview );
     
-    return 1;
+    return $self;
 }
 
 =head2 long
@@ -205,7 +245,7 @@ sub long {
 
     $self->original( $original );
     
-    return 1;
+    return $self;
 }
 
 =begin ignore
@@ -287,6 +327,7 @@ sub _build_browser {
 sub _build_parser {
     return XML::LibXML->new;
 }
+
 =end ignore
 
 =head1 AUTHOR

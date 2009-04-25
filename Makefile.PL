@@ -8,11 +8,15 @@ license  'perl';
 build_requires  'Test::More';
 build_requires  'XML::LibXML::XPathContext';
 
+requires        'WWW::Shorten';
+
 requires        'URI::Escape';
 requires        'Regexp::Common';
+
 requires        'LWP::UserAgent';
 requires        'XML::LibXML';
 requires        'XML::LibXML::XPathContext';
+
 requires        'Mouse';
 requires        'Mouse::Util::TypeConstraints';
 
